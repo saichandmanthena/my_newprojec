@@ -1,0 +1,49 @@
+Hi im saichand ,
+As per ur requirement DevOps_Fresher_Test  was solved 
+Now I am explaning step by step process ,
+
+1) create one aws free tier account
+
+2) login to aws console  and create one ubuntu 16.04 server
+
+3) connect the above server by using putty 
+
+4) install terraform  and ansible to the above ubuntu server (as per ur requirement i use
+ terraform for two ububtu severs creations and
+ ansible for install packages )
+
+5) In that server , I wrote terraform scripts for 2 ububtu 16.04 servers... named as         
+      
+        main.tf
+              
+        test1.tf
+              
+        variable.tf
+   
+    u will get the above named scripts below
+
+6) Now execute the terraform scripts by
+ following commands
+            
+       i)  terraform init
+          
+       ii) terraform plan
+            
+       iii) teraform apply
+ 
+7) Two ubuntu 16.04 servers were created 
+
+ 8) Installed packages in two Ubuntu servers by
+ using playbook , u will get the files below
+  named as 
+       
+     i) hosts (contains ip address of above 2
+ servers)
+           
+    ii) conf.yml (playbook script for install 
+packages)
+ 
+9) execute above playbook by following
+    command
+ 
+         i) ansible-playbook playbooks/conf.yml
