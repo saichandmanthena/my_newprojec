@@ -1,0 +1,18 @@
+---
+ - hosts: prod
+   remote_user: root
+   become: yes
+   become_method: yes
+   gather_facts:false
+   tasks:
+    - name: update package
+	  raw: apt-get update
+	- name: install {{items}}
+	  apt: name={{item}} state=latest
+   with_items:
+     - nvm
+	 - node
+	 - docker
+	 - docker-compose
+	 - openssl
+	 - git-core
